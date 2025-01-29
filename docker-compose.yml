@@ -1,5 +1,3 @@
-version: '2'
-
 volumes:
   settings:                          # Only required if using PERSISTENT flag (see below)
 
