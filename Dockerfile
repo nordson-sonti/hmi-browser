@@ -1,11 +1,11 @@
 ARG NODEJS_VERSION="20.12.0"
 
-FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:${NODEJS_VERSION}-bookworm-run
+FROM balenalib/amd64-debian-node:${NODEJS_VERSION}-bookworm-run
 
 # Install the necessary packages
 COPY ./build /usr/src/build
 RUN chmod a+x /usr/src/build/install_chromium
-RUN /usr/src/build/install_chromium "%%BALENA_MACHINE_NAME%%"
+RUN /usr/src/build/install_chromium "amd64"
 
 WORKDIR /usr/src/app
 
@@ -22,6 +22,7 @@ ENV UDEV=1
 RUN mkdir -p /etc/chromium/policies
 RUN mkdir -p /etc/chromium/policies/recommended
 COPY ./policy.json /etc/chromium/policies/recommended/my_policy.json
+
 
 # Download and install the virtual keyboard extension
 RUN mkdir -p /usr/src/app/extensions

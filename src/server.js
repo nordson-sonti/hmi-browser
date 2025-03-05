@@ -119,7 +119,9 @@ let launchChromium = async function(url) {
         '--noerrdialogs',
         '--disable-session-crashed-bubble',
         '--check-for-update-interval=31536000',
-        '--disable-dev-shm-usage', // TODO: work out if we can enable this for devices with >1Gb of memory
+        '--disable-dev-shm-usage',
+	'--load-extension=/usr/src/app/extensions/touchpanel_keyboard,/usr/src/app/extensions/touchpanel_kioskcontrols'
+	 // TODO: work out if we can enable this for devices with >1Gb of memory
       ];
 
       // Merge the chromium default and balena default flags

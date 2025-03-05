@@ -1,0 +1,38 @@
+/* Theme Name: Kiosk */
+.kiosk_control_container
+{
+    position:fixed;
+    top:10px;
+    left: calc(50% - 100px);
+    z-index: var(--z-header-layer, 10000);
+    background-color:transparent;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+    opacity: 0;
+}
+
+.kiosk_control {
+    background-repeat: no-repeat;
+    background-color:rgb(48, 48, 48);
+    display:block;
+    height: auto;
+    width: auto;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    font-family: 'Tahoma';
+    font-size: small;
+    border: 2px;
+    border-color: white;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+	float:left;
+}
+
+.kiosk_control_container:hover
+{
+    opacity: 1; /* Visible on hover */
+    transition: opacity 0.5s ease; /* Smooth transitions */
+}

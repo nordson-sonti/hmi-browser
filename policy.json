@@ -1,7 +1,5 @@
 {
-    "HomepageLocation": "www.balena.io",
+    "HomepageLocation": "https://edge",
     "ExtensionInstallForcelist": [
-    "aleakchihdccplidncghkekgioiakgal",
-    "cfhdojbkjhnklbpkdaibdccddilifddb"
     ]
 }
